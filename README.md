@@ -70,4 +70,5 @@ public class Mainclass {
 - Ex)) Toy Interface의 기능들을 robot, airplane, train등의 서로 다른 class들이 implements하여 같은 메소드들을 
 서로 다른 3개의 메소드로 구현하는 것이다.
 
-##AbstractClass
+
+## AbstractClass (추상클래스)
