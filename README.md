@@ -72,3 +72,66 @@ public class Mainclass {
 
 
 ## AbstractClass (추상클래스)
+
+```
+public abstract class AbstractClassEx {
+
+	int num;
+	String str;
+	
+	public AbstractClassEx() {
+		System.out.println("AbstractClassEx constructor");
+	}
+	public AbstractClassEx(int i,String s) {
+		System.out.println("AbstractClassEx constructor");
+		this.num = i;
+		this.str = s;
+	}
+	
+	public void func1() {
+		System.out.println("--- func1() Start ---");
+	}
+	
+	//추상메소드
+	public abstract void func2();
+
+}
+```
+
+- 추상클래스는 일반 클래스가 가질 수 있는것들에 더해 **추상메소드**를 가지며 이 메소드는 추상클래스를 상속하는 클래스에서 구현.
+
+***
+
+```
+public class ClassEx extends AbstractClassEx {
+	
+	public ClassEx() {
+		System.out.println();
+	}
+	
+	public ClassEx(int i,String s) {
+		super(i,s);
+	}
+
+	@Override
+	public void func2() {
+		System.out.println("--- func2() Start ---");
+	}
+	
+}
+```
+
+- 그리하여 상속하는 클래스에서 func2() 메소드를 재정의 해주었으며 이 때 생성자는 super()를 이용하여 상위클래스의 생성자이용.
+
+***
+
+```
+public class MainClass {
+	public static void main(String[] args) {
+		AbstractClassEx ex = new ClassEx(10,"java");
+		ex.func1();
+		ex.func2();
+	}
+```
+
+- Main클래스에서 상속된 객체를 생성하여 func1() func2()를 호출할 수 있음.
