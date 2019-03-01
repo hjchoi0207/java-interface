@@ -2,7 +2,7 @@
 
 >InterfaceA 
 
-```
+```java
 public interface InterfaceA {
 	public void funcA();
 }
@@ -10,7 +10,7 @@ public interface InterfaceA {
 
 >InterfaceB
 
-```
+```java
 public interface InterfaceB {
 	public void funB();
 }
@@ -19,7 +19,7 @@ public interface InterfaceB {
 ***
 >Interfaceclass
 
-```
+```java
 public class Interfaceclass implements InterfaceA, InterfaceB {
 
 	public static void main(String[] args) {
@@ -46,7 +46,7 @@ public class Interfaceclass implements InterfaceA, InterfaceB {
 
 >MainClass
 
-```
+```java
 public class Mainclass {
 	public static void main(String[] args) {
 		
@@ -73,7 +73,7 @@ public class Mainclass {
 
 ## AbstractClass (추상클래스)
 
-```
+```java
 public abstract class AbstractClassEx {
 
 	int num;
@@ -102,7 +102,7 @@ public abstract class AbstractClassEx {
 
 ***
 
-```
+```java
 public class ClassEx extends AbstractClassEx {
 	
 	public ClassEx() {
@@ -125,7 +125,7 @@ public class ClassEx extends AbstractClassEx {
 
 ***
 
-```
+```java
 public class MainClass {
 	public static void main(String[] args) {
 		AbstractClassEx ex = new ClassEx(10,"java");
